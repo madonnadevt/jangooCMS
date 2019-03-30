@@ -1,0 +1,15 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+	<h1>Article list</h1>
+	<div class="articles_dict">
+		{% for article_dict in articles_dict %}
+			<div class="article_dict">
+				<h2><a href="{% url 'article_app:detail' slug=article_dict.slug %}">{{ article_dict.title }}</a></h2>
+				<p>{{ article_dict.body_snippet }}</p>
+				<p>{{ article_dict.date }}</p>
+				<p class="author">added by {{ article_dict.author.username }}</p>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

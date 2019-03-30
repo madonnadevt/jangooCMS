@@ -1,0 +1,12 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+<div class="article-detail">
+	<div class="article">
+		<img src="{{ article_dict_view.thumb.url }}" />
+		<h2>{{ article_dict_view.title }}</h2>
+		<p>{{ article_dict_view.body }}</p>
+		<p>{{ article_dict_view.date }}</p>
+	</div>
+</div>
+{% endblock %}
